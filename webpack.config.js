@@ -1,9 +1,4 @@
-var HTMLWebpackPlugin = require('html-webpack-plugin');
-var HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
-	template: __dirname + '/app/index.html',
-	filename: 'index.html',
-	inject: 'body'
-});
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: __dirname + '/app/index.js',
@@ -18,11 +13,18 @@ module.exports = {
 	},
 	devServer:{
 		historyApiFallback: true,
+		https: true
 	},
 	output: {
 		filename: 'transformed.js',
 		path: __dirname + '/build',
 		publicPath: '/'
 	},
-	plugins: [HTMLWebpackPluginConfig]
+	plugins: [
+		new HtmlWebpackPlugin({
+			template: __dirname + '/app/index.html',
+			filename: 'index.html',
+			inject: 'body'
+		})
+	]
 };
