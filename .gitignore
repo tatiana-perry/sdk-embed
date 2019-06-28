@@ -1,8 +1,8 @@
 rootCA.key
-rootCA.perm
+rootCA.pem
 rootCA.srl
 server.crt
 server.csr
 server.csr.cnf
-server.keu
+server.key
 v3.ext
