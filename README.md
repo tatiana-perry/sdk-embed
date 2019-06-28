@@ -23,13 +23,7 @@
 }
 ```
 
-3. Create local cert
-Use either:
-- [mkcert](https://github.com/FiloSottile/mkcert) - no steps
-- [open ssl](https://www.freecodecamp.org/news/how-to-get-https-working-on-your-local-development-environment-in-5-minutes-7af615770eec/) - steps
-
-4. Create a React App with a route for /checkout (fork this one)
-https://api.bigcommerce.com/stores/jrah6gmn/v3/sites/2/routes
+3. Make a route https://api.bigcommerce.com/stores/jrah6gmn/v3/sites/2/routes
 ```json
 
 {
@@ -40,7 +34,15 @@ https://api.bigcommerce.com/stores/jrah6gmn/v3/sites/2/routes
 ```
 
 
-5. Create a S2S cart with your channel id.
+4. Create local cert
+Use either:
+- [mkcert](https://github.com/FiloSottile/mkcert) - no steps
+- [open ssl](https://www.freecodecamp.org/news/how-to-get-https-working-on-your-local-development-environment-in-5-minutes-7af615770eec/) - steps
+
+5. Create a React App with a route for /checkout (fork this one)
+
+
+6. Create a S2S cart with your channel id.
 ```json
 {
   "channel_id": 18113,
@@ -53,7 +55,7 @@ https://api.bigcommerce.com/stores/jrah6gmn/v3/sites/2/routes
   ]
 }
 ```
-5. Get the embedded checkout url: and update Checkout.js
+7. Get the embedded checkout url: and update Checkout.js
 https://api.bigcommerce.com/stores/jrah6gmn/v3/carts/9482d37f-aff7-47f6-9ba0-9a7fd59a1ebc/redirect_urls
 ```json
 {
@@ -65,8 +67,8 @@ https://api.bigcommerce.com/stores/jrah6gmn/v3/carts/9482d37f-aff7-47f6-9ba0-9a7
     "meta": {}
 }
 ```
-6. Run your app on port 443 (since the port is so low, it will need `sudo npm run` etc)
-7. Should be running at https://localhost
-8. visit https://localhost/checkout
-9. You're running a local checkout!
-10. Don't accidentally push your local cert and then need to remake it again
+8. Run your app on port 443 (since the port is so low, it will need `sudo npm run` etc)
+9. Should be running at https://localhost
+10. visit https://localhost/checkout
+11. You're running a local checkout!
+12. Don't accidentally push your local cert and then need to remake it again
