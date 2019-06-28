@@ -1,0 +1,8 @@
+rootCA.key
+rootCA.perm
+rootCA.srl
+server.crt
+server.csr
+server.csr.cnf
+server.keu
+v3.ext

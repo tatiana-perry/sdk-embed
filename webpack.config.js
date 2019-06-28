@@ -13,7 +13,8 @@ module.exports = {
 	},
 	devServer:{
 		historyApiFallback: true,
-		https: true
+		https: true,
+		port: 443
 	},
 	output: {
 		filename: 'transformed.js',

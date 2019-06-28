@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode development --https",
+    "build": "webpack --mode development --https --port 443",
     "start": "webpack-dev-server",
     "heroku-postbuild": "npm run build"
   },
